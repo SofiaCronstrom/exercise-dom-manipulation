@@ -4,7 +4,7 @@ let hoodieH3Ref = document.querySelector('.hoodie-h3');
 hoodieH3Ref.textContent = "Potato";
 
 //Nr. 2
-let NavARef = document.querySelector('header>nav>a:nth-of-type(1)');
+let NavARef = document.querySelector('nav>a:nth-of-type(1)');
 NavARef.textContent = "Start";
 
 //Nr. 3
@@ -42,3 +42,29 @@ btnRef.forEach( btn => {
 });
 
 //Nr. 10
+NavARef.classList.add('active');
+
+//Nr. 11
+let logoImgRef = document.querySelector('header>img');
+logoImgRef.classList.remove('logo');
+
+//Nr. 12
+let navRef = document.querySelector('nav');
+
+let newA = document.createElement('a');
+newA.textContent = "SALE"
+newA.style.color = "red"
+
+navRef.appendChild(newA);
+
+//Nr. 13
+let mainRef = document.querySelector('main');
+
+let newItem = document.createElement('article');
+newItem.classList.add('art-4')
+newItem.innerHTML =
+    "<figure><img src='img/hoodie-forrest.png' alt='hoodie'></figure> <h2>Sinus Hoodie</h2> <h3>Forest</h3> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus doloremque ducimus enim!</p> <button>buy</button>"
+
+mainRef.appendChild(newItem);
+
+
