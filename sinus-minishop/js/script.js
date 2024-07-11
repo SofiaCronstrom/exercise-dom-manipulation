@@ -46,7 +46,7 @@ NavARef.classList.add('active');
 
 //Nr. 11
 let logoImgRef = document.querySelector('header>img');
-logoImgRef.classList.remove('logo');
+//logoImgRef.classList.remove('logo');
 
 //Nr. 12
 let navRef = document.querySelector('nav');
@@ -67,4 +67,29 @@ newItem.innerHTML =
 
 mainRef.appendChild(newItem);
 
+//Nr. 14
 
+logoImgRef.addEventListener('click', (e) => {
+ console.log('found you!')
+});
+
+
+//Nr. 15
+let articleRefs = document.querySelectorAll('main>article');
+
+for (let i=0; i<articleRefs.length; i++){
+
+    if (articleRefs[i].classList.contains('art-1')){
+        articleRefs[i].addEventListener('click', (e) => {
+            console.log("Hi I'm article Ash");
+        });
+    } else if (articleRefs[i].classList.contains('art-2')){
+        articleRefs[i].addEventListener('click', (e) => {
+            console.log("Hi I'm article Fire");
+        });
+    } else if (articleRefs[i].classList.contains('art-3')){
+        articleRefs[i].addEventListener('click', (e) => {
+            console.log("Hi I'm article Water");
+        });
+    }
+}
